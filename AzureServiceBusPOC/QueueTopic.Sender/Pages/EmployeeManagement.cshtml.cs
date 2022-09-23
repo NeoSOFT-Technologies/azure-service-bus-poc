@@ -35,10 +35,10 @@ namespace QueueTopic.Sender.Pages
             };
 
             // Queue
-            _queueService.SendMessageAsync(employeeCreated);
+            // _queueService.SendMessageAsync(employeeCreated);
 
             // Topic
-            // _topicService.PublishMessage<Employee>(employeeCreated);
+             _topicService.PublishMessage<Employee>(employeeCreated);
         }
     }
 }

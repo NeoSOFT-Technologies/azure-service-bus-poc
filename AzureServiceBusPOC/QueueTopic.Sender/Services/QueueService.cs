@@ -19,12 +19,12 @@ namespace QueueTopic.Sender.Services
             string messageBody = JsonSerializer.Serialize(serviceBusMessage);
             var message = new Message(Encoding.UTF8.GetBytes(messageBody));
 
-            await queueClient.SendAsync(message);
+            // await queueClient.SendAsync(message);
 
             ////Scheduled Message
 
-            //DateTimeOffset scheduleTime = DateTime.UtcNow.AddMinutes(1);
-            //await queueClient.ScheduleMessageAsync(message, scheduleTime);
+            DateTimeOffset scheduleTime = DateTime.UtcNow.AddMinutes(2);
+            await queueClient.ScheduleMessageAsync(message, scheduleTime);
         }
     }
 }
