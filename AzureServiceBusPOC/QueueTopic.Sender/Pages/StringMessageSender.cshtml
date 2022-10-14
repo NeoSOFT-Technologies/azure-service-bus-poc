@@ -1,0 +1,19 @@
+﻿@page
+@model QueueTopic.Sender.Pages.StringMessageSenderModel
+
+@{
+    ViewData["Title"] = "String Message Sender";
+}
+
+
+<h2>String Message Sender</h2>
+<br />
+
+<div class="container">
+    <form method="post">
+        <label for="message">Enter a message</label><br />
+        <textarea id="message" name="message" style="height:60px; width:250px"></textarea><br /> <br />
+
+        <input type="submit" value='Submit' /><br />
+    </form>
+</div>
